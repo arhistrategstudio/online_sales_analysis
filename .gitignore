@@ -1,0 +1,14 @@
+# Poverljivi podaci (API kljucevi, pristup bazi)
+config.json
+
+# Snimci ekrana za instruktora
+*.png
+*.jpg
+*.jpeg
+*.gif
+screenshots/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
