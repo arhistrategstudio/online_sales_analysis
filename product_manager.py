@@ -18,6 +18,16 @@ class ProductManager:
         for product in self.products:
             product.display_info()
 
+    def remove_product(self, name):
+        """Uklanja proizvod iz inventara prema imenu."""
+        for product in self.products:
+            if product.name.lower() == name.lower():
+                self.products.remove(product)
+                print(f"Uklonjen proizvod: {product.name}")
+                return True
+        print(f"Proizvod '{name}' nije pronadjen u inventaru.")
+        return False
+
     def total_inventory_value(self):
         """Racuna ukupnu vrednost svih proizvoda u inventaru."""
         total = sum(product.total_value() for product in self.products)
